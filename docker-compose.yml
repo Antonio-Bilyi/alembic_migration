@@ -15,4 +15,4 @@ services:
     restart: unless-stopped
 
 volumes:
-  db_data
+  db_data:
