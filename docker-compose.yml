@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    container_name: school_db
+    environment:
+      POSTGRES_DB: school_db
+      POSTGRES_USER: anton_bilyi
+      POSTGRES_PASSWORD: anton_428
+    ports:
+      - '5432:5432'
+    volumes:
+      - db_data:/var/lib/postgres/data
+    restart: unless-stopped
+
+volumes:
+  db_data
